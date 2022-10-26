@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "prettier --write .",
-    "test": "GITHUB_TOKEN='00000' GITHUB_REPOSITORY='Roms1383/emissary' jest --coverage",
+    "test": "GITHUB_TOKEN=\"00000\" GITHUB_REPOSITORY=\"Roms1383/emissary\"; jest --coverage",
     "start": "node dist/index.js",
     "prestart": "npm run prepare",
     "prepare": "ncc build lib/index.ts -o dist --minify"
@@ -25,7 +25,9 @@
     "@octokit/core": "^4.0.5",
     "@octokit/graphql": "^5.0.1",
     "@octokit/rest": "^19.0.4",
-    "dotenv": "^16.0.2"
+    "dotenv": "^16.0.3",
+    "global": "^4.4.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@octokit/types": "^7.5.0",

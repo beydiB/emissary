@@ -1,6 +1,8 @@
 import { debug } from '@actions/core'
 import { Octokit } from '@octokit/core'
 import { Endpoints } from '@octokit/types'
+const dotenv = require("dotenv")
+dotenv.config()
 
 const octokit = new Octokit({
   auth: `${process.env.GITHUB_TOKEN || process.env.INPUT_TOKEN}`,
